@@ -150,12 +150,51 @@
         </ul>
       </div>
     </div>
+    
+<h2 style="text-align:center; margin-top:60px;">Interactive Map</h2>
+<div id="map" style="width: 100%; height: 450px; border-radius: 10px;"></div>
 
-    <h2 style="text-align:center; margin-top:60px;">Interactive Map</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.442604886133!2d4.884062715797019!3d52.37316967978711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c3a9a628ad%3A0x4c71aa94b303e197!2sDam%20Square!5e0!3m2!1sen!2snl!4v1620380224740!5m2!1sen!2snl" 
-      allowfullscreen="" loading="lazy">
-    </iframe>
+<script>
+  function initMap() {
+    const center = { lat: 52.370216, lng: 4.895168 }; // Amsterdam
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: center,
+    });
+
+    const locations = [
+      // Basic Plan
+      { title: "Dam Square", position: { lat: 52.3732, lng: 4.8922 } },
+      { title: "Vondelpark", position: { lat: 52.3570, lng: 4.8687 } },
+      { title: "Amsterdam Central Station", position: { lat: 52.3780, lng: 4.9004 } },
+
+      // Standard Plan
+      { title: "Rijksmuseum", position: { lat: 52.359997, lng: 4.885219 } },
+      { title: "Anne Frank House", position: { lat: 52.3752, lng: 4.8838 } },
+      { title: "Heineken Experience", position: { lat: 52.3579, lng: 4.8916 } },
+
+      // Deluxe Plan
+      { title: "Van Gogh Museum", position: { lat: 52.3584, lng: 4.8811 } },
+      { title: "Canal Cruise", position: { lat: 52.3732, lng: 4.8944 } },
+      { title: "Jordaan District", position: { lat: 52.3770, lng: 4.8834 } }
+    ];
+
+    locations.forEach(loc => {
+      new google.maps.Marker({
+        position: loc.position,
+        map: map,
+        title: loc.title,
+      });
+    });
+  }
+</script>
+
+<!-- Google Maps JavaScript API (replace YOUR_API_KEY) -->
+<script async
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
+
   </main>
 
 </body>
