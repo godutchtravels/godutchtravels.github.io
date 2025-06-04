@@ -3,156 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plan Your Itinerary - GoDutch Travel</title>
+  <title>Plan Your Trip - GoDutch Travel</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #e6f2ff;
-      color: #333;
-      padding: 0;
+      color: black;
     }
 
     nav {
       background-color: #004080;
       padding: 15px 20px;
       display: flex;
-      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
       gap: 30px;
     }
 
-    nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     h1 {
       text-align: center;
-      color: #004080;
-      margin-top: 30px;
-    }
-
-    .form-container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .form-group {
       margin-bottom: 20px;
     }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 10px;
+    .plan {
       border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
       border-radius: 5px;
     }
 
-    button {
+    .plan h2 {
+      margin-top: 0;
+      color: #ff6600;
+    }
+
+    .plan p {
+      margin: 10px 0;
+    }
+
+    .plan button {
       padding: 10px 20px;
-      background: #ff6600;
+      background-color: #ff6600;
       color: white;
       border: none;
       border-radius: 5px;
-      font-weight: bold;
       cursor: pointer;
+      font-weight: bold;
     }
 
-    .result {
-      margin-top: 20px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .plan button:hover {
+      background-color: #e65c00;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
     }
   </style>
 </head>
 <body>
+
   <nav>
     <div class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Globe_icon.svg" alt="GoDutch Logo" />
-      <span class="brand-name">GoDutch Travel</span>
+      <span style="color:white; font-weight:bold; font-size: 1.2rem;">GoDutch Travel</span>
     </div>
-    <a href="index.html">Home</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="#">Pricing</a>
-    <a href="#">Contact</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#details">Itinerary</a>
+      <a href="itinerary.html">Plan Your Trip</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
   </nav>
 
-  <h1>Plan Your Itinerary</h1>
-  <div class="form-container">
-    <form onsubmit="event.preventDefault(); suggestItinerary();">
-      <div class="form-group">
-        <label for="parents">Number of Parents:</label>
-        <input type="number" id="parents" required />
-      </div>
-      <div class="form-group">
-        <label for="children">Number of Children:</label>
-        <input type="number" id="children" required onchange="generateChildrenAgeInputs()" />
-      </div>
-      <div id="children-ages" class="form-group"></div>
-      <div class="form-group">
-        <label for="budget">Total Budget (€):</label>
-        <input type="number" id="budget" required />
-      </div>
-      <button type="submit">Find My Group</button>
-    </form>
-    <div id="result" class="result"></div>
-  </div>
+  <main>
+    <h1>Plan Your Family Trip</h1>
 
-  <script>
-    function generateChildrenAgeInputs() {
-      const count = parseInt(document.getElementById('children').value);
-      const container = document.getElementById('children-ages');
-      container.innerHTML = '';
-      for (let i = 0; i < count; i++) {
-        const input = document.createElement('input');
-        input.type = 'number';
-        input.placeholder = `Age of Child ${i + 1}`;
-        input.className = 'child-age';
-        input.required = true;
-        container.appendChild(input);
-        container.appendChild(document.createElement('br'));
-      }
-    }
+    <div class="plan">
+      <h2>Basic Plan - €999</h2>
+      <p>Includes accommodation and city tour.</p>
+      <button onclick="document.getElementById('msg1').innerText = 'You booked the Basic Plan!'">Book Now</button>
+      <div id="msg1" class="message"></div>
+    </div>
 
-    function suggestItinerary() {
-      const parents = parseInt(document.getElementById('parents').value);
-      const children = parseInt(document.getElementById('children').value);
-      const budget = parseInt(document.getElementById('budget').value);
-      const childAges = Array.from(document.getElementsByClassName('child-age')).map(input => parseInt(input.value));
-      const result = document.getElementById('result');
+    <div class="plan">
+      <h2>Standard Plan - €1499</h2>
+      <p>Includes everything in Basic plus meals and museum tickets.</p>
+      <button onclick="document.getElementById('msg2').innerText = 'You booked the Standard Plan!'">Book Now</button>
+      <div id="msg2" class="message"></div>
+    </div>
 
-      const avgAge = (childAges.reduce((a, b) => a + b, 0) / childAges.length) || 0;
-      const totalPeople = parents + children;
+    <div class="plan">
+      <h2>Deluxe Plan - €1999</h2>
+      <p>Includes everything in Standard plus guided tours and canal cruise.</p>
+      <button onclick="document.getElementById('msg3').innerText = 'You booked the Deluxe Plan!'">Book Now</button>
+      <div id="msg3" class="message"></div>
+    </div>
+  </main>
 
-      let group = '';
-
-      if (avgAge < 12 && budget < 1000) {
-        group = 'Group A: Kids Fun Pack - Zoo, parks, pancake boat, and interactive museums.';
-      } else if (avgAge >= 12 && avgAge <= 50 && budget >= 1000 && budget <= 3000) {
-        group = 'Group B: Explorer Pack - Anne Frank House, canal cruise, Rijksmuseum, and local markets.';
-      } else {
-        group = 'Group C: Relaxed Culture Pack - Art galleries, historic tours, cafes, and garden visits.';
-      }
-
-      result.innerHTML = `<strong>Your Suggested Itinerary:</strong><p>${group}</p>`;
-    }
-  </script>
 </body>
 </html>
