@@ -2,70 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GoDutch Travel - Amsterdam Family Trip</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoDutch Travel - Family Trip to Amsterdam</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #333;
-      background-color: #b7fffa;
+      color: black;
+      background-color: #e6f2ff; /* Pale blue */
     }
 
     nav {
-      background: #ff6600;
-      padding: 1rem;
-      text-align: center;
+      background-color: #004080;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    nav a {
-      margin: 0 1rem;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .logo-section {
-      background-color: #cce4f7;
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
-
-    .logo-section img {
-      max-width: 200px;
-      height: auto;
-    }
-
-    .logo-section h1 {
-      margin-top: 10px;
-      font-size: 2rem;
-      color: #1d3557;
-    }
-
-    .logo-section p {
-      font-size: 1.1rem;
-      color: #333;
-      margin-bottom: 0;
+    .nav-links a:hover {
+      text-decoration: underline;
     }
 
     header {
       background: url('https://source.unsplash.com/1600x600/?amsterdam,travel') no-repeat center center/cover;
-      height: 80vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: black;
       text-align: center;
-      color: white;
       padding: 0 20px;
     }
 
-    header h2 {
-      font-size: 2.5rem;
+    header h1 {
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin-bottom: 1.5rem;
     }
 
@@ -99,6 +96,7 @@
     }
 
     .feature h3 {
+      margin-top: 0;
       color: #ff6600;
     }
 
@@ -113,19 +111,22 @@
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="help.html">Help</a>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Globe_icon.svg" alt="GoDutch Logo" />
+      <span style="color:white; font-weight:bold; font-size: 1.2rem;">GoDutch Travel</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="plan.html">Plans</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
-
-  <div class="logo-section">
-    <img src="godutch-logo.jpeg" alt="GoDutch Travel Logo">
-    <h1>GoDutch Travel</h1>
-    <p>Touch down. See the sights. Experience Amsterdam.</p>
-  </div>
 
   <header>
     <div>
-      <h2>Explore Amsterdam with GoDutch</h2>
+      <h1>Explore Amsterdam with GoDutch Travel</h1>
       <p>A perfect family getaway full of culture, canals, and adventure</p>
       <a href="#details">Discover the Trip</a>
     </div>
@@ -149,16 +150,9 @@
     </div>
   </section>
 
-  <section style="text-align:center;">
-    <h2>Ready to Go Dutch?</h2>
-    <p>Book your unforgettable Amsterdam family trip with GoDutch Travel today!</p>
-    <a href="#" style="padding: 1rem 2rem; background: #ff6600; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">Contact Us</a>
-  </section>
-
   <footer>
     <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
   </footer>
 
 </body>
 </html>
-
