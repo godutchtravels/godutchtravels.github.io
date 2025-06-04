@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoDutch Help</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #b7fffa;
+      color: #333;
+    }
+
+    nav {
+      background: #ff6600;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .helper-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .helper-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 220px;
+    }
+
+    .helper-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #ff6600;
+    }
+
+    .helper-card h3 {
+      margin: 10px 0 5px;
+      color: #1d3557;
+    }
+
+    .helper-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #444;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="help.html">Help</a>
+  </nav>
+
+  <div class="container">
+    <h1>Need Help?</h1>
+    <p>Contact our support team below!</p>
+
+    <div class="helper-grid">
+      <!-- Sam McCabe -->
+      <div class="helper-card">
+        <img src="sam.png" alt="Sam McCabe">
+        <h3>Sam McCabe</h3>
+        <p>sam.mccabe@westminster.org.uk</p>
+      </div>
+
+      <!-- Adam Smith -->
+      <div class="helper-card">
+        <img src="adam.png" alt="Adam Smith">
+        <h3>Adam Smith</h3>
+        <p>adam.smith@westminster.org.uk</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
