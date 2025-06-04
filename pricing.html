@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan Your Trip - GoDutch Travel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f2ff;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .plan h3 {
+      margin-top: 0;
+      color: #ff6600;
+    }
+
+    .plan button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .plan button:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Globe_icon.svg" alt="GoDutch Logo" />
+      <span style="color:white; font-weight:bold; font-size: 1.2rem;">GoDutch Travel</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#details">Itinerary</a>
+      <a href="itinerary.html">Plan Your Trip</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section>
+    <h2 style="text-align:center;">Choose Your Trip Plan</h2>
+
+    <div class="plan">
+      <h3>Basic Plan</h3>
+      <p>Includes 2 nights in a 3-star hotel, breakfast, and one guided tour.</p>
+      <p><strong>Price:</strong> €300 per person</p>
+      <button onclick="alert('You booked the Basic Plan!')">Book Now</button>
+    </div>
+
+    <div class="plan">
+      <h3>Standard Plan</h3>
+      <p>Includes 4 nights in a 4-star hotel, breakfast & dinner, and two guided tours.</p>
+      <p><strong>Price:</strong> €550 per person</p>
+      <button onclick="alert('You booked the Standard Plan!')">Book Now</button>
+    </div>
+
+    <div class="plan">
+      <h3>Deluxe Plan</h3>
+      <p>Includes 6 nights in a 5-star hotel, all meals, canal cruise, and guided tours.</p>
+      <p><strong>Price:</strong> €800 per person</p>
+      <button onclick="alert('You booked the Deluxe Plan!')">Book Now</button>
+    </div>
+  </section>
+</body>
+</html>
