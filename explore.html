@@ -183,16 +183,16 @@
 
   // Add some example markers
   const locations = [
-    { name: "Dam Square", lat: 52.3732, lng: 4.8922 },
-    { name: "Vondelpark", lat: 52.3570, lng: 4.8687 },
-    { name: "Van Gogh Museum", lat: 52.3584, lng: 4.8811 },
+    { name: "Dam Square", lat: 52.3732, lng: 4.8922, plan: "red" },
+    { name: "Vondelpark", lat: 52.3570, lng: 4.8687, plan: "white" },
+    { name: "Van Gogh Museum", lat: 52.3584, lng: 4.8811, "blue" },
   ];
 
-  locations.forEach(loc => {
-    L.marker([loc.lat, loc.lng])
-      .addTo(map)
-      .bindPopup(`<strong>${loc.name}</strong>`);
-  });
+locations.forEach(loc => {
+  L.marker([loc.lat, loc.lng], { icon: icons[loc.plan] })
+    .addTo(map)
+    .bindPopup(`<strong>${loc.name}</strong><br/>Plan: ${loc.plan}`);
+});
 </script>
 
   </main>
