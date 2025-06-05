@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GoDutch Travel - Family Trip to Amsterdam</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
   <style>
     body {
       margin: 0;
@@ -46,64 +47,23 @@
       text-decoration: underline;
     }
 
+    /* Header styles with background slideshow */
     header {
       position: relative;
       height: 100vh;
-      overflow: hidden;
+      color: white;
+      text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      color: white;
+      overflow: hidden;
     }
 
-    header .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    header .header-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 20px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    header a {
-      padding: 0.8rem 1.5rem;
-      background: #ff6600;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .swiper-container {
+    .swiper {
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
       z-index: 0;
-    }
-
-    .swiper-slide {
-      width: 100%;
-      height: 100%;
     }
 
     .swiper-slide img {
@@ -112,12 +72,80 @@
       object-fit: cover;
     }
 
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+    }
+
+    .header-content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .header-content p {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+
+    .header-content a {
+      padding: 0.8rem 1.5rem;
+      background: #ff6600;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+      z-index: 3;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
 
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .feature {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: #ff6600;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Dropdown navigation */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -157,32 +185,6 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .feature {
-      flex: 1 1 300px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 20px;
-    }
-
-    .feature h3 {
-      margin-top: 0;
-      color: #ff6600;
-    }
-
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
   </style>
 </head>
 <body>
@@ -197,7 +199,7 @@
       <a href="explore.html">Explore</a>
       <a href="plan.html">Plans</a>
       <div class="dropdown">
-        <a href="#" class="nav-link dropbtn">Itineraries ▾</a>
+        <a href="#" class="dropbtn">Itineraries ▾</a>
         <div class="dropdown-content">
           <a href="itineraryred.html">Red Plan</a>
           <a href="itinerarywhite.html">White Plan</a>
@@ -210,14 +212,22 @@
   </nav>
 
   <header>
-    <div class="swiper-container">
+    <!-- Swiper slideshow -->
+    <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="images/Amsterdam 1 2.png" alt="Amsterdam 1 2"></div>
         <div class="swiper-slide"><img src="images/Amsterdam 2.png" alt="Amsterdam 2"></div>
         <div class="swiper-slide"><img src="images/IMG_0528.png" alt="IMG_0528"></div>
       </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
+
+    <!-- Dark overlay -->
     <div class="overlay"></div>
+
+    <!-- Header text -->
     <div class="header-content">
       <h1>Explore Amsterdam with GoDutch Travel</h1>
       <p>A perfect family getaway full of culture, canals, and adventure</p>
@@ -247,17 +257,18 @@
     <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
   </footer>
 
+  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper(".mySwiper", {
       loop: true,
       autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
+        delay: 4000,
+        disableOnInteraction: false,
       },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
       }
     });
   </script>
