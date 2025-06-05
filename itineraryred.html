@@ -2,17 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red Plan - GoDutch Travel</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffe5e5;
-      color: #333;
+      color: black;
+      background-color: #e6f2ff;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Red Plan Itinerary</h1>
-  <p>This page will show the full itinerary details for the Red Plan. adam wuz here - CIPHER RULEZZ!!</p>
+
+  <nav>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Globe_icon.svg" alt="GoDutch Logo" />
+      <span style="color:white; font-weight:bold; font-size: 1.2rem;">GoDutch Travel</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Itineraries ▾</button>
+        <div class="dropdown-content">
+          <a href="itinerary_red.html">Red Plan</a>
+          <a href="itinerary_white.html">White Plan</a>
+          <a href="itinerary_blue.html">Blue Plan</a>
+        </div>
+      </div>
+      <a href="plan.html">Plan Your Trip</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Red Plan Itinerary</h1>
+    <p>A carefully curated family itinerary with iconic highlights of Amsterdam.</p>
+  </header>
+
+  <section>
+    <h2>What's Included</h2>
+    <ul>
+      <li>3-day canal pass</li>
+      <li>Visit to the Rijksmuseum and Van Gogh Museum</li>
+      <li>Guided bike tour through Vondelpark</li>
+      <li>Family boat dinner cruise</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
