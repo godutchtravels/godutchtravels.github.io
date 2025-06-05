@@ -191,7 +191,7 @@
 locations.forEach(loc => {
   L.marker([loc.lat, loc.lng], { icon: icons[loc.plan] })
     .addTo(map)
-    .bindPopup(`<strong>${loc.name}</strong><br/>Plan: ${loc.plan}`);
+    .bindPopup(`<strong>${loc.name}`);
 });
 </script>
 
