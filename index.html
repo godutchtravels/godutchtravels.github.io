@@ -106,7 +106,6 @@
     .swiper-button-prev {
       color: white;
       z-index: 3;
-      cursor: pointer;
     }
 
     .overlay {
@@ -265,11 +264,14 @@
   <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       }
-      // No autoplay here
     });
   </script>
 </body>
