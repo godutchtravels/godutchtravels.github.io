@@ -47,7 +47,6 @@
       text-decoration: underline;
     }
 
-    /* Header styles with background slideshow */
     header {
       position: relative;
       height: 100vh;
@@ -78,16 +77,20 @@
       max-width: 90%;
     }
 
+    .header-content h1,
+    .header-content p {
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
     .header-content h1 {
       font-size: 3rem;
       margin-bottom: 0.5rem;
-      color: white;
     }
 
     .header-content p {
       font-size: 1.3rem;
       margin-bottom: 1.5rem;
-      color: white;
     }
 
     .header-content a {
@@ -103,8 +106,7 @@
     .swiper-button-prev {
       color: white;
       z-index: 3;
-      top: 50%;
-      transform: translateY(-50%);
+      cursor: pointer;
     }
 
     .overlay {
@@ -147,7 +149,6 @@
       padding: 20px;
     }
 
-    /* Dropdown navigation */
     .dropdown {
       position: relative;
       display: inline-block;
@@ -262,16 +263,13 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mySwiper", {
+    const swiper = new Swiper(".mySwiper", {
       loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
       navigation: {
         nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
+        prevEl: ".swiper-button-prev",
       }
+      // No autoplay here
     });
   </script>
 </body>
