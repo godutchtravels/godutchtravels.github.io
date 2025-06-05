@@ -2,17 +2,201 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>White Plan - GoDutch Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Plan - GoDutch Travel</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffe5e5;
-      color: #333;
+      color: black;
+      background-color: #e6f2ff;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Red Plan Itinerary</h1>
-  <p>This page will show the full itinerary details for the Red Plan.</p>
+
+  <nav>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Globe_icon.svg" alt="GoDutch Logo" />
+      <span style="color:white; font-weight:bold; font-size: 1.2rem;">GoDutch Travel</span>
+    </div>
+    <div class="nav-links">      
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="plan.html">Plans</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Itineraries ▾</a>
+        <div class="dropdown-content">
+          <a href="itineraryred.html">Red Plan</a>
+          <a href="itinerarywhite.html">White Plan</a>
+          <a href="itineraryblue.html">Blue Plan</a>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
+      <a href="help.html">Help</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>White Plan Itinerary</h1>
+    <p>Our plan for families with slightly older kids. All itineraries our suggestions. If you would like to create a custom itinerary please visit our help page and contact us. Custom itineraries may cost more.</p>
+  </header>
+<section>
+  <h2>Red Plan – 3-Day Itinerary</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 1</h3>
+      <p><strong>7:16 am:</strong> Depart London St Pancras via Eurostar</p>
+      <p><strong>11:20 am:</strong> Arrive at Amsterdam Centraal</p>
+      <p><strong>11:30 am:</strong> Take tram 26 to Four Elements Hotel, IJburg</p>
+      <p><strong>12:15 pm:</strong> Check-in and freshen up</p>
+      <p><strong>1:30 pm:</strong> Lunch at Four Elements Hotel Restaurant</p>
+      <p><strong>3:00 pm:</strong> Stroll and explore IJburg Bay</p>
+      <p><strong>5:30 pm:</strong> Return to hotel</p>
+      <p><strong>6:00 pm:</strong> Dinner at Four Elements Hotel Restaurant</p>
+      <p><strong>7:00 pm:</strong> Relax and rest at the hotel</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 2</h3>
+      <p><strong>8:00 am:</strong> Breakfast at hotel</p>
+      <p><strong>9:00 am:</strong> Take tram to Rijksmuseum (approx. 45 mins)</p>
+      <p><strong>10:00 am:</strong> Visit Rijksmuseum</p>
+      <p><strong>12:15 pm:</strong> Lunch at Museumplein Café</p>
+      <p><strong>1:30 pm:</strong> Visit Van Gogh Museum</p>
+      <p><strong>3:30 pm:</strong> Return to hotel</p>
+      <p><strong>5:30 pm:</strong> Dinner at Four Elements Hotel Restaurant</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 3</h3>
+      <p><strong>8:00 am:</strong> Breakfast at hotel</p>
+      <p><strong>9:00 am:</strong> Travel to Anne Frank House (approx. 45 mins)</p>
+      <p><strong>10:00 am:</strong> Visit Anne Frank House</p>
+      <p><strong>12:00 pm:</strong> Lunch at nearby café</p>
+      <p><strong>1:30 pm:</strong> Guided Bike Tour (Hidden Gems & Highlights – 2.5 hours)</p>
+      <p><strong>4:00 pm:</strong> Finish tour and return to hotel</p>
+      <p><strong>6:00 pm:</strong> Dinner at Four Elements Hotel Restaurant</p>  
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 4</h3>
+      <p><strong>7:00 am:</strong> Breakfast at hotel</p>
+      <p><strong>8:00 am:</strong> Travel to Zaanse Schans (approx. 1.5 hours)</p>
+      <p><strong>9:30 am:</strong> Explore Zaanse Schans</p>
+      <p><strong>12:00 pm:</strong> Lunch at local eatery</p>
+      <p><strong>1:00 pm:</strong> Travel to Keukenhof Gardens (approx. 1.5 hours)</p>
+      <p><strong>2:30 pm:</strong> Visit Keukenhof Gardens</p>
+      <p><strong>5:30 pm:</strong> Return to hotel</p>
+      <p><strong>7:30 pm:</strong> Dinner at Four Elements Hotel Restaurant</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 5</h3>
+      <p><strong>8:00 am:</strong> Breakfast at hotel</p>
+      <p><strong>9:00 am:</strong> Check out and travel to Amsterdam Centraal</p>
+      <p><strong>11:20 am:</strong> Depart Amsterdam via Eurostar</p>
+      <p><strong>3:30 pm:</strong> Arrive at London St Pancras</p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
