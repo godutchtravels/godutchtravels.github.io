@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GoDutch Travel - Family Trip to Amsterdam</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <style>
     body {
       margin: 0;
@@ -81,46 +82,45 @@
       margin: 0 auto;
     }
 
-    /* Navigation Dropdown Styling */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-.dropbtn {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0;
-  cursor: pointer;
-}
+    .dropbtn {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0;
+      cursor: pointer;
+    }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-  z-index: 1;
-  top: 100%;
-  left: 0;
-  min-width: 160px;
-  border-radius: 5px;
-}
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 5px;
+    }
 
-.dropdown-content a {
-  display: block;
-  color: #004080;
-  padding: 10px 15px;
-  text-decoration: none;
-}
+    .dropdown-content a {
+      display: block;
+      color: #004080;
+      padding: 10px 15px;
+      text-decoration: none;
+    }
 
-.dropdown-content a:hover {
-  background-color: #f2f2f2;
-}
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
     .features {
       display: flex;
@@ -139,6 +139,25 @@
     .feature h3 {
       margin-top: 0;
       color: #ff6600;
+    }
+
+    .swiper-container {
+      width: 100%;
+      padding: 40px 0;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 80%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -181,6 +200,18 @@
     </div>
   </header>
 
+  <!-- Slideshow Section -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/Amsterdam 1 2.png" alt="Amsterdam 1 2"></div>
+      <div class="swiper-slide"><img src="images/Amsterdam 2.png" alt="Amsterdam 2"></div>
+      <div class="swiper-slide"><img src="images/IMG_0528.png" alt="IMG_0528"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
   <section id="details">
     <h2 style="text-align:center;">Why Choose This Trip?</h2>
     <div class="features">
@@ -203,5 +234,24 @@
     <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
   </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      }
+    });
+  </script>
 </body>
 </html>
