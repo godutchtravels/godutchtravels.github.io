@@ -10,7 +10,7 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       color: black;
-      background-color: #e6f2ff; /* Pale blue */
+      background-color: #e6f2ff;
     }
 
     nav {
@@ -47,13 +47,29 @@
     }
 
     header {
-      background: url('https://source.unsplash.com/1600x600/?amsterdam,travel') no-repeat center center/cover;
+      position: relative;
       height: 100vh;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: black;
       text-align: center;
+      color: white;
+    }
+
+    header .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header .header-content {
+      position: relative;
+      z-index: 2;
       padding: 0 20px;
     }
 
@@ -74,6 +90,26 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+    }
+
+    .swiper-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .swiper-slide {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     section {
@@ -141,25 +177,6 @@
       color: #ff6600;
     }
 
-    .swiper-container {
-      width: 100%;
-      padding: 40px 0;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      width: 80%;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-    }
-
     footer {
       background: #333;
       color: white;
@@ -193,24 +210,20 @@
   </nav>
 
   <header>
-    <div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/Amsterdam 1 2.png" alt="Amsterdam 1 2"></div>
+        <div class="swiper-slide"><img src="images/Amsterdam 2.png" alt="Amsterdam 2"></div>
+        <div class="swiper-slide"><img src="images/IMG_0528.png" alt="IMG_0528"></div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="header-content">
       <h1>Explore Amsterdam with GoDutch Travel</h1>
       <p>A perfect family getaway full of culture, canals, and adventure</p>
       <a href="explore.html">Discover the Trip</a>
     </div>
   </header>
-
-  <!-- Slideshow Section -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="images/Amsterdam 1 2.png" alt="Amsterdam 1 2"></div>
-      <div class="swiper-slide"><img src="images/Amsterdam 2.png" alt="Amsterdam 2"></div>
-      <div class="swiper-slide"><img src="images/IMG_0528.png" alt="IMG_0528"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
 
   <section id="details">
     <h2 style="text-align:center;">Why Choose This Trip?</h2>
@@ -234,22 +247,17 @@
     <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
   </footer>
 
-  <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper-container', {
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
       autoplay: {
         delay: 3000,
         disableOnInteraction: false
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
       }
     });
   </script>
