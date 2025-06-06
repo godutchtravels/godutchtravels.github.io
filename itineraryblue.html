@@ -2,17 +2,203 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Blue Plan - GoDutch Travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Plan - GoDutch Travel</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffe5e5;
-      color: #333;
+      color: black;
+      background-color: #e6f2ff;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropbtn {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      color: #004080;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Red Plan Itinerary</h1>
-  <p>This page will show the full itinerary details for the Red Plan.</p>
+
+  <nav>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Globe_icon.svg" alt="GoDutch Logo" />
+      <span style="color:white; font-weight:bold; font-size: 1.2rem;">GoDutch Travel</span>
+    </div>
+    <div class="nav-links">      
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="plan.html">Plans</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn">Itineraries ▾</a>
+        <div class="dropdown-content">
+          <a href="itineraryred.html">Red Plan</a>
+          <a href="itinerarywhite.html">White Plan</a>
+          <a href="itineraryblue.html">Blue Plan</a>
+        </div>
+      </div>
+      <a href="pricing.html">Pricing</a>
+      <a href="help.html">Help</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Blue Plan Itinerary</h1>
+    <p>Our no expenses spared plan's suggested itinerary. If you wish to create a custom itinerary, please contact us through the help page. Custom itineraries may cost more.</p>
+  </header>
+<section>
+  <h2>Red Plan – 3-Day Itinerary</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 1</h3>
+      <p><strong>7:00 am:</strong> Check-in at London St Pancras International (Eurostar Business Premier Lounge)</p>
+      <p><strong>8:16 am:</strong> Eurostar departs to Amsterdam Centraal</p>
+      <p><strong>11:12 am:</strong> Arrive at Amsterdam Centraal Station</p>
+      <p><strong>11:30 am:</strong> Private luxury transfer to Waldorf Astoria Amsterdam</p>
+      <p><strong>12:00 pm:</strong> Check-in and welcome drink at Waldorf Astoria Amsterdam</p>
+      <p><strong>1:00 pm:</strong> Lunch at <em>Peacock Alley</em> within the hotel</p>
+      <p><strong>3:00 pm:</strong> Private canal cruise with champagne and hors d'oeuvres</p>
+      <p><strong>5:00 pm:</strong> Return to hotel for relaxation at the Guerlain Spa</p>
+      <p><strong>7:30 pm:</strong> Dinner at <em>Spectrum</em>, the hotel's two Michelin-starred restaurant</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 2</h3>
+      <p><strong>8:00 am:</strong> Breakfast at <em>Peacock Alley</em></p>
+      <p><strong>9:00 am:</strong> Private transfer to Rijksmuseum</p>
+      <p><strong>9:30 am:</strong> Guided tour of Rijksmuseum</p>
+      <p><strong>11:30 am:</strong> Walk to Van Gogh Museum</p>
+      <p><strong>12:00 pm:</strong> Explore Van Gogh Museum</p>
+      <p><strong>1:30 pm:</strong> Lunch at <em>RIJKS®</em>, Michelin-starred restaurant at the museum</p>
+      <p><strong>3:00 pm:</strong> Return to hotel for leisure time or spa treatments</p>
+      <p><strong>7:00 pm:</strong> Dinner at <em>De Kas</em>, a unique restaurant in a greenhouse setting</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 3</h3>
+      <p><strong>8:00 am:</strong> Breakfast at the hotel</p>
+      <p><strong>9:00 am:</strong> Private transfer to Anne Frank House</p>
+      <p><strong>9:30 am:</strong> Guided tour of Anne Frank House</p>
+      <p><strong>11:00 am:</strong> Coffee break at nearby café</p>
+      <p><strong>12:00 pm:</strong> Return to hotel for light lunch</p>
+      <p><strong>2:00 pm:</strong> Luxury VIP Bike Tour with chauffeur, exploring Amsterdam's highlights</p>
+      <p><strong>4:00 pm:</strong> Return to hotel for relaxation</p>
+      <p><strong>7:30 pm:</strong> Dinner at <em>The Duchess</em>, a Michelin-starred restaurant</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 4</h3>
+      <p><strong>7:00 am:</strong> Early breakfast at the hotel</p>
+      <p><strong>8:00 am:</strong> Private transfer to Zaanse Schans</p>
+      <p><strong>9:00 am:</strong> Explore windmills and traditional crafts at Zaanse Schans</p>
+      <p><strong>11:00 am:</strong> Transfer to Keukenhof Gardens</p>
+      <p><strong>12:00 pm:</strong> Lunch at <em>Restaurant De Vier Seizoenen</em> near Keukenhof</p>
+      <p><strong>1:30 pm:</strong> Stroll through Keukenhof Gardens</p>
+      <p><strong>4:00 pm:</strong> Return to hotel</p>
+      <p><strong>7:00 pm:</strong> Farewell dinner at <em>Bord'Eau</em>, a Michelin-starred restaurant</p>
+    </div>
+    <div style="flex: 1 1 300px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <h3>Day 5</h3>
+      <p><strong>8:00 am:</strong> Breakfast at the hotel</p>
+      <p><strong>9:00 am:</strong> Check-out and private transfer to Amsterdam Centraal Station</p>
+      <p><strong>11:15 am:</strong> Eurostar Business Premier departs to London</p>
+      <p><strong>2:05 pm:</strong> Arrive at London St Pancras International</p>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 GoDutch Travel. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
