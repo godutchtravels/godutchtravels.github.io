@@ -138,7 +138,7 @@
 
       <div id="childAgesContainer"></div>
 
-      <label>Budget per person (EUR):</label>
+      <label>Total Budget:</label>
       <input type="number" id="budget" required />
 
       <button type="submit">Find Plan</button>
@@ -184,12 +184,12 @@
       // --- Plan selection logic ---
       let recommendation = "";
 
-      if (budget < 100) {
-        recommendation = "We recommend the White Plan for a relaxing, budget-friendly trip.";
-      } else if (ages.some(age => age < 6)) {
-        recommendation = "We recommend the Blue Plan, great for younger children and active families.";
+      if (budget > 1000) {
+        recommendation = "We recommend the Blue Plan so you can see Amsterdam in luxury.";
+      } else if (ages.some(age => age < 9)) {
+        recommendation = "We recommend the Red Plan, great for younger children";
       } else {
-        recommendation = "We recommend the Red Plan, full of cultural activities for all ages.";
+        recommendation = "We recommend the Red Plan, full of cultural activities for slightly older kids.";
       }
 
       document.getElementById("output").textContent = recommendation;
