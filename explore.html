@@ -50,6 +50,16 @@
       border-radius: 5px;
     }
 
+    .plan-box .columns {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem; /* optional, for spacing between columns */
+    }
+
+    .plan-box .column {
+      flex: 1;
+    }
+
     .dropdown-content a {
       display: block;
       color: #004080 !important;
@@ -189,14 +199,18 @@
 
       <div class="plan">
         <h2>White Plan</h2>
-        <ul class="location-list">
-          <li>Rijksmuseum</li>
-          <li>Anne Frank House</li>
-          <li>Zannse Schans</li>
-          <li>Keukenhof Gardens</li>
-          <li>Bike Tour</li>
-          <li>Van Gogh Museum</li>          
-        </ul>
+        <div class="columns">
+          <div class="column">
+            <p>Rijksmuseum</p>
+            <p>Anne Frank House</p>
+            <p>Zannse Schans</p>
+          </div>
+          <div class="column">
+            <p>Keukenhof Gardens</p>
+            <p>Bike Tour</p>
+            <p>Van Gogh Museum</p>          
+          </div>
+        </div>
       </div>
     </div>
     <h2 style="text-align:center; margin-top:60px;">Interactive Map</h2>
