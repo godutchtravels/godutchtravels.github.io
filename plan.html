@@ -39,7 +39,7 @@
 
     .dropdown-content a {
       display: block;
-      color: #004080;
+      color: #004080 !important;
       padding: 10px 15px;
       text-decoration: none;
     }
@@ -234,12 +234,12 @@
       // --- Plan selection logic ---
       let recommendation = "";
 
-      if (budget > 1000) {
+      if (budget > 4,700) {
         recommendation = "We recommend the Blue Plan so you can see Amsterdam in luxury.";
       } else if (ages.some(age => age < 9)) {
         recommendation = "We recommend the Red Plan, great for younger children";
       } else {
-        recommendation = "We recommend the Red Plan, full of cultural activities for slightly older kids.";
+        recommendation = "We recommend the White Plan, our standard plan for slightly older kids.";
       }
 
       document.getElementById("output").textContent = recommendation;
